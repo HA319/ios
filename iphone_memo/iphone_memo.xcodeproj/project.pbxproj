@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BD06836F20692918002D6705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06836E20692918002D6705 /* AppDelegate.swift */; };
-		BD06837120692918002D6705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06837020692918002D6705 /* ViewController.swift */; };
 		BD06837420692918002D6705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD06837220692918002D6705 /* Main.storyboard */; };
 		BD06837620692919002D6705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD06837520692919002D6705 /* Assets.xcassets */; };
-		BD06837920692919002D6705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD06837720692919002D6705 /* LaunchScreen.storyboard */; };
 		BD06838420692919002D6705 /* iphone_memoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06838320692919002D6705 /* iphone_memoTests.swift */; };
 		BD06838F20692919002D6705 /* iphone_memoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06838E20692919002D6705 /* iphone_memoUITests.swift */; };
+		BD06839D206929C0002D6705 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06839C206929C0002D6705 /* MemoListViewController.swift */; };
+		BD06839F206929D4002D6705 /* MemoDetailtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06839E206929D4002D6705 /* MemoDetailtViewController.swift */; };
+		BD0683A1206929FB002D6705 /* MemoTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0683A0206929FB002D6705 /* MemoTitleCell.swift */; };
+		BD0683A420692E52002D6705 /* MemoTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0683A320692E52002D6705 /* MemoTitleCell.xib */; };
+		BD0683A620692EC6002D6705 /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0683A520692EC6002D6705 /* CommonUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +39,8 @@
 /* Begin PBXFileReference section */
 		BD06836B20692918002D6705 /* iphone_memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone_memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD06836E20692918002D6705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD06837020692918002D6705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD06837320692918002D6705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD06837520692919002D6705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BD06837820692919002D6705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD06837A20692919002D6705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD06837F20692919002D6705 /* iphone_memoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphone_memoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD06838320692919002D6705 /* iphone_memoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iphone_memoTests.swift; sourceTree = "<group>"; };
@@ -47,6 +48,11 @@
 		BD06838A20692919002D6705 /* iphone_memoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphone_memoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD06838E20692919002D6705 /* iphone_memoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iphone_memoUITests.swift; sourceTree = "<group>"; };
 		BD06839020692919002D6705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD06839C206929C0002D6705 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		BD06839E206929D4002D6705 /* MemoDetailtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailtViewController.swift; sourceTree = "<group>"; };
+		BD0683A0206929FB002D6705 /* MemoTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTitleCell.swift; sourceTree = "<group>"; };
+		BD0683A320692E52002D6705 /* MemoTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoTitleCell.xib; sourceTree = "<group>"; };
+		BD0683A520692EC6002D6705 /* CommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,14 @@
 		BD06836D20692918002D6705 /* iphone_memo */ = {
 			isa = PBXGroup;
 			children = (
+				BD0683A220692E32002D6705 /* cell */,
 				BD06836E20692918002D6705 /* AppDelegate.swift */,
-				BD06837020692918002D6705 /* ViewController.swift */,
 				BD06837220692918002D6705 /* Main.storyboard */,
 				BD06837520692919002D6705 /* Assets.xcassets */,
-				BD06837720692919002D6705 /* LaunchScreen.storyboard */,
 				BD06837A20692919002D6705 /* Info.plist */,
+				BD06839C206929C0002D6705 /* MemoListViewController.swift */,
+				BD06839E206929D4002D6705 /* MemoDetailtViewController.swift */,
+				BD0683A520692EC6002D6705 /* CommonUtil.swift */,
 			);
 			path = iphone_memo;
 			sourceTree = "<group>";
@@ -123,6 +131,15 @@
 				BD06839020692919002D6705 /* Info.plist */,
 			);
 			path = iphone_memoUITests;
+			sourceTree = "<group>";
+		};
+		BD0683A220692E32002D6705 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD0683A0206929FB002D6705 /* MemoTitleCell.swift */,
+				BD0683A320692E52002D6705 /* MemoTitleCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD06837920692919002D6705 /* LaunchScreen.storyboard in Resources */,
+				BD0683A420692E52002D6705 /* MemoTitleCell.xib in Resources */,
 				BD06837620692919002D6705 /* Assets.xcassets in Resources */,
 				BD06837420692918002D6705 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD06837120692918002D6705 /* ViewController.swift in Sources */,
+				BD06839F206929D4002D6705 /* MemoDetailtViewController.swift in Sources */,
+				BD06839D206929C0002D6705 /* MemoListViewController.swift in Sources */,
+				BD0683A1206929FB002D6705 /* MemoTitleCell.swift in Sources */,
+				BD0683A620692EC6002D6705 /* CommonUtil.swift in Sources */,
 				BD06836F20692918002D6705 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,14 +322,6 @@
 				BD06837320692918002D6705 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BD06837720692919002D6705 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD06837820692919002D6705 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -427,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
 				INFOPLIST_FILE = iphone_memo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "a.iphone-memo";
@@ -441,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
 				INFOPLIST_FILE = iphone_memo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "a.iphone-memo";
