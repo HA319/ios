@@ -13,6 +13,9 @@
 		BD068403206943DE002D6705 /* googlemapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD068402206943DE002D6705 /* googlemapTests.swift */; };
 		BD06840E206943DE002D6705 /* googlemapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06840D206943DE002D6705 /* googlemapUITests.swift */; };
 		BD06845B206BD26E002D6705 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06845A206BD26E002D6705 /* MapViewController.swift */; };
+		BD06845D206D3DB7002D6705 /* MapOnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD06845C206D3DB7002D6705 /* MapOnView.xib */; };
+		BD06845F206D3DF9002D6705 /* MapOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06845E206D3DF9002D6705 /* MapOnView.swift */; };
+		BD7792AA2073C71E00B9856F /* PlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7792A92073C71E00B9856F /* PlacePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		BD06840D206943DE002D6705 /* googlemapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googlemapUITests.swift; sourceTree = "<group>"; };
 		BD06840F206943DE002D6705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD06845A206BD26E002D6705 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BD06845C206D3DB7002D6705 /* MapOnView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapOnView.xib; sourceTree = "<group>"; };
+		BD06845E206D3DF9002D6705 /* MapOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOnView.swift; sourceTree = "<group>"; };
+		BD7792A92073C71E00B9856F /* PlacePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +123,11 @@
 		BD0683EC206943DE002D6705 /* googlemap */ = {
 			isa = PBXGroup;
 			children = (
+				BD068460206D4131002D6705 /* view */,
 				BD0683ED206943DE002D6705 /* AppDelegate.swift */,
 				BD06845A206BD26E002D6705 /* MapViewController.swift */,
 				BD0683F1206943DE002D6705 /* Main.storyboard */,
+				BD7792A92073C71E00B9856F /* PlacePickerViewController.swift */,
 				BD0683F4206943DE002D6705 /* Assets.xcassets */,
 				BD0683F9206943DE002D6705 /* Info.plist */,
 			);
@@ -142,6 +150,15 @@
 				BD06840F206943DE002D6705 /* Info.plist */,
 			);
 			path = googlemapUITests;
+			sourceTree = "<group>";
+		};
+		BD068460206D4131002D6705 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BD06845C206D3DB7002D6705 /* MapOnView.xib */,
+				BD06845E206D3DF9002D6705 /* MapOnView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +273,7 @@
 			files = (
 				BD0683F5206943DE002D6705 /* Assets.xcassets in Resources */,
 				BD0683F3206943DE002D6705 /* Main.storyboard in Resources */,
+				BD06845D206D3DB7002D6705 /* MapOnView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +302,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-googlemap/Pods-googlemap-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +358,8 @@
 			files = (
 				BD0683EE206943DE002D6705 /* AppDelegate.swift in Sources */,
 				BD06845B206BD26E002D6705 /* MapViewController.swift in Sources */,
+				BD7792AA2073C71E00B9856F /* PlacePickerViewController.swift in Sources */,
+				BD06845F206D3DF9002D6705 /* MapOnView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
