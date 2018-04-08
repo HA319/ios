@@ -8,36 +8,33 @@
 
 import UIKit
 
+// バグ1 最後までスクロールしても輝度がmaxにならない
+// バグ2 端までスクロールした後に再度スクロールすると前回のタップ位置に戻る
+// バグ3 画像がはみでてる
+
 class SwipeBaseView: UIView {
-    
-    struct Limit {
-        static let leading: CGFloat = 20.0
-        static let trailing = UIScreen.main.bounds.width - 20.0
-    }
     
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var swipeTextField: UITextField!
     @IBOutlet weak var swipeView: UIView!
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint! // max:375
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     var current: CGFloat = 0.0
         
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        initBaseView()
         initSwipeView()
-        initTextField()
         initImageView()
         
-        leadingConstraint.constant = Limit.trailing * UIScreen.main.brightness
+        leadingConstraint.constant = baseView.frame.width * UIScreen.main.brightness
         current = leadingConstraint.constant
     }
 
     private func initBaseView() {
         
-        baseView.layer.borderWidth = CGFloat(3)
-        baseView.layer.borderColor = UIColor.white.cgColor
-        baseView.layer.cornerRadius = baseView.frame.width / 2
+        baseView.layer.cornerRadius = 15
     }
     
     private func initSwipeView() {
@@ -47,23 +44,18 @@ class SwipeBaseView: UIView {
         swipeView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(swipingView)))
     }
     
-    private func initTextField() {
-        
-        // swipeTextField調整
-        // いつか調整するかも
-    }
-    
     private func initImageView() {
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: swipeView.frame.width, height: swipeView.frame.height))
-        imageView.image = UIImage(named: "SliderImage")
+        imageView.image = UIImage(named: "ExImage")?.resizeImage(width: swipeView.frame.width, height: swipeView.frame.height) // TODO: - 画像がはみ出ているから画像を直すかresizeImageでどうにかする
         swipeView.addSubview(imageView)
     }
     
     @objc func swipingView(sender: UIPanGestureRecognizer) {
 
         let position = sender.translation(in: swipeView)
-        if (position.x + current) < Limit.leading || (position.x + current) > Limit.trailing - swipeView.frame.width {
+        // Baseを超えたらreturn
+        if (position.x + current) < 0 || (position.x + current) > baseView.frame.width - swipeView.frame.width {
             return
         }
         
@@ -76,9 +68,8 @@ class SwipeBaseView: UIView {
             current = leadingConstraint.constant
         default:
             leadingConstraint.constant = position.x + current
-            let max = Limit.trailing
-            let c = leadingConstraint.constant / max
-            UIScreen.main.brightness = c
+            let rate = leadingConstraint.constant / baseView.frame.width
+            UIScreen.main.brightness = rate
         }
     }
 }
