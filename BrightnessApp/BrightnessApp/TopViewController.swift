@@ -13,23 +13,9 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let swipeBaseView = UINib(nibName: "SwipeBaseView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! SwipeBaseView
+        swipeBaseView.frame.origin = CGPoint(x: 0, y: 50) // TODO: -  y適当
+        
+        view.addSubview(swipeBaseView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

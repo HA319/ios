@@ -13,6 +13,8 @@
 		BDA0442C20788E110000A2BC /* BrightnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0442B20788E110000A2BC /* BrightnessAppTests.swift */; };
 		BDA0443720788E110000A2BC /* BrightnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0443620788E110000A2BC /* BrightnessAppUITests.swift */; };
 		BDA0444520788E420000A2BC /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0444420788E420000A2BC /* TopViewController.swift */; };
+		BDA04447207890130000A2BC /* SwipeBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA04446207890130000A2BC /* SwipeBaseView.xib */; };
+		BDA04449207890DC0000A2BC /* SwipeBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA04448207890DC0000A2BC /* SwipeBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		BDA0443620788E110000A2BC /* BrightnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessAppUITests.swift; sourceTree = "<group>"; };
 		BDA0443820788E110000A2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA0444420788E420000A2BC /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		BDA04446207890130000A2BC /* SwipeBaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeBaseView.xib; sourceTree = "<group>"; };
+		BDA04448207890DC0000A2BC /* SwipeBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				BDA0441620788E100000A2BC /* AppDelegate.swift */,
-				BDA0441A20788E100000A2BC /* Main.storyboard */,
-				BDA0441D20788E110000A2BC /* Assets.xcassets */,
 				BDA0442220788E110000A2BC /* Info.plist */,
+				BDA0441D20788E110000A2BC /* Assets.xcassets */,
+				BDA0441A20788E100000A2BC /* Main.storyboard */,
 				BDA0444420788E420000A2BC /* TopViewController.swift */,
+				BDA04446207890130000A2BC /* SwipeBaseView.xib */,
+				BDA04448207890DC0000A2BC /* SwipeBaseView.swift */,
 			);
 			path = BrightnessApp;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA0441E20788E110000A2BC /* Assets.xcassets in Resources */,
+				BDA04447207890130000A2BC /* SwipeBaseView.xib in Resources */,
 				BDA0441C20788E100000A2BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA0444520788E420000A2BC /* TopViewController.swift in Sources */,
+				BDA04449207890DC0000A2BC /* SwipeBaseView.swift in Sources */,
 				BDA0441720788E100000A2BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
 				INFOPLIST_FILE = BrightnessApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
 				INFOPLIST_FILE = BrightnessApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
