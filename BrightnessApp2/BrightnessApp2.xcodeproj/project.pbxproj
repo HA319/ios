@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDB069AE2081B8E4009739ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB069AD2081B8E4009739ED /* Extensions.swift */; };
 		BDED9991207E61A800625476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED9990207E61A800625476 /* AppDelegate.swift */; };
 		BDED9993207E61A800625476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED9992207E61A800625476 /* ViewController.swift */; };
 		BDED9996207E61A800625476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDED9994207E61A800625476 /* Main.storyboard */; };
 		BDED9998207E61A900625476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDED9997207E61A900625476 /* Assets.xcassets */; };
-		BDED999B207E61A900625476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDED9999207E61A900625476 /* LaunchScreen.storyboard */; };
 		BDED99A6207E61A900625476 /* BrightnessApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED99A5207E61A900625476 /* BrightnessApp2Tests.swift */; };
 		BDED99B1207E61A900625476 /* BrightnessApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED99B0207E61A900625476 /* BrightnessApp2UITests.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDB069AD2081B8E4009739ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BDED998D207E61A800625476 /* BrightnessApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightnessApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDED9990207E61A800625476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDED9992207E61A800625476 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDED9995207E61A800625476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDED9997207E61A900625476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BDED999A207E61A900625476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDED999C207E61A900625476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDED99A1207E61A900625476 /* BrightnessApp2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrightnessApp2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDED99A5207E61A900625476 /* BrightnessApp2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessApp2Tests.swift; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 				BDED9992207E61A800625476 /* ViewController.swift */,
 				BDED9994207E61A800625476 /* Main.storyboard */,
 				BDED9997207E61A900625476 /* Assets.xcassets */,
-				BDED9999207E61A900625476 /* LaunchScreen.storyboard */,
 				BDED999C207E61A900625476 /* Info.plist */,
+				BDB069AD2081B8E4009739ED /* Extensions.swift */,
 			);
 			path = BrightnessApp2;
 			sourceTree = "<group>";
@@ -228,7 +228,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDED999B207E61A900625476 /* LaunchScreen.storyboard in Resources */,
 				BDED9998207E61A900625476 /* Assets.xcassets in Resources */,
 				BDED9996207E61A800625476 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDED9993207E61A800625476 /* ViewController.swift in Sources */,
+				BDB069AE2081B8E4009739ED /* Extensions.swift in Sources */,
 				BDED9991207E61A800625476 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,14 +298,6 @@
 				BDED9995207E61A800625476 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BDED9999207E61A900625476 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDED999A207E61A900625476 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -430,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
 				INFOPLIST_FILE = BrightnessApp2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
 				INFOPLIST_FILE = BrightnessApp2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
