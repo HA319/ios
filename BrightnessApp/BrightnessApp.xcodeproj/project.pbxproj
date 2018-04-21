@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD3361372079FA0A0013030F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3361362079FA0A0013030F /* UIImage+Extension.swift */; };
+		BDA0441720788E100000A2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0441620788E100000A2BC /* AppDelegate.swift */; };
+		BDA0441C20788E100000A2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA0441A20788E100000A2BC /* Main.storyboard */; };
+		BDA0441E20788E110000A2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA0441D20788E110000A2BC /* Assets.xcassets */; };
+		BDA0442C20788E110000A2BC /* BrightnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0442B20788E110000A2BC /* BrightnessAppTests.swift */; };
+		BDA0443720788E110000A2BC /* BrightnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0443620788E110000A2BC /* BrightnessAppUITests.swift */; };
+		BDA0444520788E420000A2BC /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0444420788E420000A2BC /* TopViewController.swift */; };
+		BDA04447207890130000A2BC /* SwipeBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA04446207890130000A2BC /* SwipeBaseView.xib */; };
+		BDA04449207890DC0000A2BC /* SwipeBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA04448207890DC0000A2BC /* SwipeBaseView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDA0442820788E110000A2BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDA0440B20788E100000A2BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDA0441220788E100000A2BC;
+			remoteInfo = BrightnessApp;
+		};
+		BDA0443320788E110000A2BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDA0440B20788E100000A2BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDA0441220788E100000A2BC;
+			remoteInfo = BrightnessApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD3361362079FA0A0013030F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BDA0441320788E100000A2BC /* BrightnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA0441620788E100000A2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDA0441B20788E100000A2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDA0441D20788E110000A2BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDA0442220788E110000A2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA0442720788E110000A2BC /* BrightnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrightnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA0442B20788E110000A2BC /* BrightnessAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessAppTests.swift; sourceTree = "<group>"; };
+		BDA0442D20788E110000A2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA0443220788E110000A2BC /* BrightnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrightnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA0443620788E110000A2BC /* BrightnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessAppUITests.swift; sourceTree = "<group>"; };
+		BDA0443820788E110000A2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA0444420788E420000A2BC /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		BDA04446207890130000A2BC /* SwipeBaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeBaseView.xib; sourceTree = "<group>"; };
+		BDA04448207890DC0000A2BC /* SwipeBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBaseView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDA0441020788E100000A2BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA0442420788E110000A2BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA0442F20788E110000A2BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD3361352079F6AF0013030F /* SwipeBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				BDA04446207890130000A2BC /* SwipeBaseView.xib */,
+				BDA04448207890DC0000A2BC /* SwipeBaseView.swift */,
+			);
+			path = SwipeBaseView;
+			sourceTree = "<group>";
+		};
+		BDA0440A20788E100000A2BC = {
+			isa = PBXGroup;
+			children = (
+				BDA0441520788E100000A2BC /* BrightnessApp */,
+				BDA0442A20788E110000A2BC /* BrightnessAppTests */,
+				BDA0443520788E110000A2BC /* BrightnessAppUITests */,
+				BDA0441420788E100000A2BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDA0441420788E100000A2BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDA0441320788E100000A2BC /* BrightnessApp.app */,
+				BDA0442720788E110000A2BC /* BrightnessAppTests.xctest */,
+				BDA0443220788E110000A2BC /* BrightnessAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDA0441520788E100000A2BC /* BrightnessApp */ = {
+			isa = PBXGroup;
+			children = (
+				BDA0441620788E100000A2BC /* AppDelegate.swift */,
+				BDA0442220788E110000A2BC /* Info.plist */,
+				BDA0441D20788E110000A2BC /* Assets.xcassets */,
+				BDA0441A20788E100000A2BC /* Main.storyboard */,
+				BDA0444420788E420000A2BC /* TopViewController.swift */,
+				BD3361352079F6AF0013030F /* SwipeBaseView */,
+				BD3361362079FA0A0013030F /* UIImage+Extension.swift */,
+			);
+			path = BrightnessApp;
+			sourceTree = "<group>";
+		};
+		BDA0442A20788E110000A2BC /* BrightnessAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDA0442B20788E110000A2BC /* BrightnessAppTests.swift */,
+				BDA0442D20788E110000A2BC /* Info.plist */,
+			);
+			path = BrightnessAppTests;
+			sourceTree = "<group>";
+		};
+		BDA0443520788E110000A2BC /* BrightnessAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDA0443620788E110000A2BC /* BrightnessAppUITests.swift */,
+				BDA0443820788E110000A2BC /* Info.plist */,
+			);
+			path = BrightnessAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDA0441220788E100000A2BC /* BrightnessApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDA0443B20788E110000A2BC /* Build configuration list for PBXNativeTarget "BrightnessApp" */;
+			buildPhases = (
+				BDA0440F20788E100000A2BC /* Sources */,
+				BDA0441020788E100000A2BC /* Frameworks */,
+				BDA0441120788E100000A2BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrightnessApp;
+			productName = BrightnessApp;
+			productReference = BDA0441320788E100000A2BC /* BrightnessApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDA0442620788E110000A2BC /* BrightnessAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDA0443E20788E110000A2BC /* Build configuration list for PBXNativeTarget "BrightnessAppTests" */;
+			buildPhases = (
+				BDA0442320788E110000A2BC /* Sources */,
+				BDA0442420788E110000A2BC /* Frameworks */,
+				BDA0442520788E110000A2BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDA0442920788E110000A2BC /* PBXTargetDependency */,
+			);
+			name = BrightnessAppTests;
+			productName = BrightnessAppTests;
+			productReference = BDA0442720788E110000A2BC /* BrightnessAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDA0443120788E110000A2BC /* BrightnessAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDA0444120788E110000A2BC /* Build configuration list for PBXNativeTarget "BrightnessAppUITests" */;
+			buildPhases = (
+				BDA0442E20788E110000A2BC /* Sources */,
+				BDA0442F20788E110000A2BC /* Frameworks */,
+				BDA0443020788E110000A2BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDA0443420788E110000A2BC /* PBXTargetDependency */,
+			);
+			name = BrightnessAppUITests;
+			productName = BrightnessAppUITests;
+			productReference = BDA0443220788E110000A2BC /* BrightnessAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDA0440B20788E100000A2BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "安藤輝";
+				TargetAttributes = {
+					BDA0441220788E100000A2BC = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					BDA0442620788E110000A2BC = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = BDA0441220788E100000A2BC;
+					};
+					BDA0443120788E110000A2BC = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = BDA0441220788E100000A2BC;
+					};
+				};
+			};
+			buildConfigurationList = BDA0440E20788E100000A2BC /* Build configuration list for PBXProject "BrightnessApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDA0440A20788E100000A2BC;
+			productRefGroup = BDA0441420788E100000A2BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDA0441220788E100000A2BC /* BrightnessApp */,
+				BDA0442620788E110000A2BC /* BrightnessAppTests */,
+				BDA0443120788E110000A2BC /* BrightnessAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDA0441120788E100000A2BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA0441E20788E110000A2BC /* Assets.xcassets in Resources */,
+				BDA04447207890130000A2BC /* SwipeBaseView.xib in Resources */,
+				BDA0441C20788E100000A2BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA0442520788E110000A2BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA0443020788E110000A2BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDA0440F20788E100000A2BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA0444520788E420000A2BC /* TopViewController.swift in Sources */,
+				BDA04449207890DC0000A2BC /* SwipeBaseView.swift in Sources */,
+				BDA0441720788E100000A2BC /* AppDelegate.swift in Sources */,
+				BD3361372079FA0A0013030F /* UIImage+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA0442320788E110000A2BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA0442C20788E110000A2BC /* BrightnessAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDA0442E20788E110000A2BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA0443720788E110000A2BC /* BrightnessAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDA0442920788E110000A2BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDA0441220788E100000A2BC /* BrightnessApp */;
+			targetProxy = BDA0442820788E110000A2BC /* PBXContainerItemProxy */;
+		};
+		BDA0443420788E110000A2BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDA0441220788E100000A2BC /* BrightnessApp */;
+			targetProxy = BDA0443320788E110000A2BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDA0441A20788E100000A2BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDA0441B20788E100000A2BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDA0443920788E110000A2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDA0443A20788E110000A2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDA0443C20788E110000A2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
+				INFOPLIST_FILE = BrightnessApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.BrightnessApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDA0443D20788E110000A2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89RJRQW9HY;
+				INFOPLIST_FILE = BrightnessApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.BrightnessApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDA0443F20788E110000A2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrightnessAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.BrightnessAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrightnessApp.app/BrightnessApp";
+			};
+			name = Debug;
+		};
+		BDA0444020788E110000A2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrightnessAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.BrightnessAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrightnessApp.app/BrightnessApp";
+			};
+			name = Release;
+		};
+		BDA0444220788E110000A2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrightnessAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.BrightnessAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrightnessApp;
+			};
+			name = Debug;
+		};
+		BDA0444320788E110000A2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrightnessAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.BrightnessAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrightnessApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDA0440E20788E100000A2BC /* Build configuration list for PBXProject "BrightnessApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDA0443920788E110000A2BC /* Debug */,
+				BDA0443A20788E110000A2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDA0443B20788E110000A2BC /* Build configuration list for PBXNativeTarget "BrightnessApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDA0443C20788E110000A2BC /* Debug */,
+				BDA0443D20788E110000A2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDA0443E20788E110000A2BC /* Build configuration list for PBXNativeTarget "BrightnessAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDA0443F20788E110000A2BC /* Debug */,
+				BDA0444020788E110000A2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDA0444120788E110000A2BC /* Build configuration list for PBXNativeTarget "BrightnessAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDA0444220788E110000A2BC /* Debug */,
+				BDA0444320788E110000A2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDA0440B20788E100000A2BC /* Project object */;
+}
