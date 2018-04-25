@@ -21,20 +21,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTO-lH-mgF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="66.5"/>
-                                <color key="backgroundColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="19" width="375" height="67.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMG-Nr-I7g">
+                                        <rect key="frame" x="303.5" y="4" width="61.5" height="62.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xMG-Nr-I7g" secondAttribute="height" multiplier="1:1" id="MTE-6I-4Wc"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xMG-Nr-I7g" secondAttribute="trailing" constant="10" id="XpI-Ag-tra"/>
+                                    <constraint firstItem="xMG-Nr-I7g" firstAttribute="top" secondItem="QTO-lH-mgF" secondAttribute="top" constant="5" id="gky-FO-KHN"/>
+                                    <constraint firstAttribute="bottom" secondItem="xMG-Nr-I7g" secondAttribute="bottom" id="nBj-wp-KFY"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-v7-x8o" userLabel="Slider Base View">
-                                <rect key="frame" x="0.0" y="86.5" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="86.5" width="375" height="180.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-Dz-Pkt">
-                                        <rect key="frame" x="37.5" y="20" width="300" height="140"/>
+                                        <rect key="frame" x="37.5" y="20" width="300" height="140.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apK-Vk-vSs" userLabel="Icon View">
-                                                <rect key="frame" x="20" y="0.0" width="140" height="139.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="20" y="0.0" width="140.5" height="140"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-Ko-2UZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="140.5" height="140"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="apK-Vk-vSs" secondAttribute="height" multiplier="1:1" id="FF7-HS-4DF"/>
+                                                    <constraint firstItem="8BE-Ko-2UZ" firstAttribute="leading" secondItem="apK-Vk-vSs" secondAttribute="leading" id="Lfv-41-8uT"/>
+                                                    <constraint firstItem="8BE-Ko-2UZ" firstAttribute="top" secondItem="apK-Vk-vSs" secondAttribute="top" id="P3C-m3-ohG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8BE-Ko-2UZ" secondAttribute="bottom" id="kKM-7n-huz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8BE-Ko-2UZ" secondAttribute="trailing" id="vhk-dn-ybW"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -47,7 +69,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="bE5-Dz-Pkt" firstAttribute="width" secondItem="Ykb-v7-x8o" secondAttribute="width" multiplier="0.8" id="1qX-vQ-9uI"/>
                                     <constraint firstItem="bE5-Dz-Pkt" firstAttribute="centerX" secondItem="Ykb-v7-x8o" secondAttribute="centerX" id="PSa-82-K9C"/>
@@ -56,25 +78,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUX-Yj-JGN" userLabel="Line View">
-                                <rect key="frame" x="0.0" y="266" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="266.5" width="375" height="2"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="qkZ-gm-vjX"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFE-Ta-PiE" userLabel="Setting Base View">
-                                <rect key="frame" x="0.0" y="268" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="268.5" width="375" height="271"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D18-fc-oa9" userLabel="Timer Button">
-                                        <rect key="frame" x="0.0" y="65.5" width="140" height="139.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Timer"/>
+                                        <rect key="frame" x="0.0" y="65.5" width="140.5" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="Timer"/>
                                         <connections>
                                             <action selector="tappedTimerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1W-Tu-eg9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa0-Vw-GHD" userLabel="Schedule Button">
-                                        <rect key="frame" x="235" y="65.5" width="140" height="139.5"/>
+                                        <rect key="frame" x="234.5" y="65.5" width="140.5" height="140"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Schedule"/>
                                         <connections>
@@ -82,7 +104,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="fa0-Vw-GHD" firstAttribute="centerY" secondItem="FFE-Ta-PiE" secondAttribute="centerY" id="HWf-ma-lua"/>
                                     <constraint firstItem="fa0-Vw-GHD" firstAttribute="height" secondItem="D18-fc-oa9" secondAttribute="height" id="Pa6-eC-R2o"/>
@@ -94,20 +116,20 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGh-fB-eA0" userLabel="Line View">
-                                <rect key="frame" x="0.0" y="538" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="539.5" width="375" height="2"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="cC3-gD-YYW"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6du-jF-Mi5" userLabel="Preset Base View">
-                                <rect key="frame" x="0.0" y="540.5" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="542" width="375" height="270.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zov-zk-bu2">
-                                        <rect key="frame" x="28" y="86" width="319" height="98"/>
+                                        <rect key="frame" x="28" y="87" width="319" height="98.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-9Q-d07" userLabel="Button1">
-                                                <rect key="frame" x="0.0" y="0.0" width="65" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="98.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
@@ -115,7 +137,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZt-F2-Bp2" userLabel="Button2">
-                                                <rect key="frame" x="85" y="0.0" width="64" height="98"/>
+                                                <rect key="frame" x="85" y="0.0" width="64.5" height="98.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
@@ -123,7 +145,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-vc-pl3" userLabel="Button3">
-                                                <rect key="frame" x="169" y="0.0" width="65.5" height="98"/>
+                                                <rect key="frame" x="169.5" y="0.0" width="65.5" height="98.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
@@ -131,11 +153,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0R-fq-0gZ" userLabel="Button4">
-                                                <rect key="frame" x="254.5" y="0.0" width="64.5" height="98"/>
+                                                <rect key="frame" x="255" y="0.0" width="64" height="98.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="SAVE"/>
                                                 <connections>
-                                                    <action selector="tappedPresetButton4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ger-rh-7HL"/>
+                                                    <action selector="tappedPresetSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbu-nM-xS1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -149,7 +171,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="zov-zk-bu2" firstAttribute="centerY" secondItem="6du-jF-Mi5" secondAttribute="centerY" id="4zh-FQ-aEq"/>
                                     <constraint firstItem="zov-zk-bu2" firstAttribute="centerX" secondItem="6du-jF-Mi5" secondAttribute="centerX" id="LXn-oV-4Nz"/>
@@ -158,16 +180,16 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnG-Xd-4WE" userLabel="Picker View">
-                                <rect key="frame" x="0.0" y="540" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="541.5" width="375" height="270.5"/>
                                 <subviews>
                                     <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ds-n3-IWn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="216.5"/>
                                         <date key="date" timeIntervalSinceReferenceDate="545491261.78030503">
                                             <!--2018-04-15 13:21:01 +0000-->
                                         </date>
                                     </datePicker>
                                     <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-bR-6ls">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="216.5"/>
                                         <date key="date" timeIntervalSinceReferenceDate="545838505.29548299">
                                             <!--2018-04-19 13:48:25 +0000-->
                                         </date>
@@ -176,7 +198,7 @@
                                         </connections>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGP-Jt-XKX" userLabel="Start Picker Count">
-                                        <rect key="frame" x="0.0" y="216" width="375" height="54"/>
+                                        <rect key="frame" x="0.0" y="217.5" width="375" height="54"/>
                                         <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -201,16 +223,16 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7Q-he-Ckl">
-                                <rect key="frame" x="0.0" y="540" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="541.5" width="375" height="270.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xff-aO-IvP">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="216.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcX-xO-WYO" userLabel="Timer Pause Button">
-                                        <rect key="frame" x="0.0" y="216" width="187.5" height="54"/>
+                                        <rect key="frame" x="0.0" y="217.5" width="187.5" height="54"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="PAUSE"/>
                                         <connections>
@@ -218,14 +240,14 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si8-1p-iIt">
-                                        <rect key="frame" x="0.0" y="216" width="187.5" height="54"/>
+                                        <rect key="frame" x="0.0" y="217.5" width="187.5" height="54"/>
                                         <state key="normal" title="RESTART"/>
                                         <connections>
                                             <action selector="tappedTimerRestartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bav-Z9-C0M"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ece-Na-uaG" userLabel="Timer Cancel Button">
-                                        <rect key="frame" x="187.5" y="216" width="187.5" height="54"/>
+                                        <rect key="frame" x="187.5" y="217.5" width="187.5" height="54"/>
                                         <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                         <state key="normal" title="CANCEL"/>
                                         <connections>
@@ -258,7 +280,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNU-1h-wDj" userLabel="Ad View">
-                                <rect key="frame" x="0.0" y="810" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="812" width="375" height="90.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -311,7 +333,7 @@
                         <outlet property="presetButton1" destination="lNu-9Q-d07" id="wCl-c3-4V3"/>
                         <outlet property="presetButton2" destination="QZt-F2-Bp2" id="tRQ-Jf-wSY"/>
                         <outlet property="presetButton3" destination="eGN-vc-pl3" id="nLC-ai-3YE"/>
-                        <outlet property="presetButton4" destination="z0R-fq-0gZ" id="F9a-hP-0PI"/>
+                        <outlet property="presetSaveButton" destination="z0R-fq-0gZ" id="s95-Tj-79R"/>
                         <outlet property="scheduleButton" destination="fa0-Vw-GHD" id="3hh-mG-hOD"/>
                         <outlet property="schedulePickerView" destination="l6t-bR-6ls" id="qWr-5D-mJb"/>
                         <outlet property="scheduleTrailingConstraint" destination="qHP-dv-D6s" id="cmG-SV-j9m"/>
@@ -332,4 +354,8 @@
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Slider" width="140" height="140"/>
+        <image name="Timer" width="140" height="140"/>
+    </resources>
 </document>
