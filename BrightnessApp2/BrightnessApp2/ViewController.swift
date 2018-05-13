@@ -15,12 +15,13 @@ class ViewController: UIViewController {
         static let preset2 = "preset2"
         static let preset3 = "preset3"
         static let preset4 = "preset4"
+        static let appId = "ca-app-pub-8597944773307026~5245994650"
+        static let bannerUnitId = "ca-app-pub-8597944773307026/8992833827"
     }
     
     @IBOutlet private weak var sliderView: UIView!
     @IBOutlet private weak var iconView: UIView!
     @IBOutlet private weak var timerButton: UIButton!
-    @IBOutlet private weak var scheduleButton: UIButton!
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var presetButton1: UIButton!
     @IBOutlet private weak var presetButton2: UIButton!
@@ -28,35 +29,21 @@ class ViewController: UIViewController {
     @IBOutlet private weak var presetSaveButton: UIButton!
     @IBOutlet private weak var pickerView: UIView!
     @IBOutlet private weak var timerPickerView: UIDatePicker!
-    @IBOutlet private weak var schedulePickerView: UIDatePicker!
     @IBOutlet private weak var timerDispView: UIView!
     @IBOutlet private weak var timerLabel: UILabel!
     @IBOutlet private weak var timerPauseButton: UIButton!
     @IBOutlet private weak var timerRestartButton: UIButton!
     @IBOutlet private weak var timerCancelButton: UIButton!
     
-    @IBOutlet private weak var timerLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var scheduleTrailingConstraint: NSLayoutConstraint!
-    
     var isAllowNotification = false
     var timerPickerHiddenFlg = false
     var timerLabelHiddenFlg = false
     var timerCount = 0
-    var scheduleTimerCount = 0
     var timer = Timer()
-    var scheduleTimer = Timer()
     var brighness = CGFloat(0)
     var currentLocation = CGFloat(0)
     var currentConstraint = CGFloat(0)
     var preLocation = CGFloat(0)
-    
-    var width: CGFloat {
-        return UIScreen.main.bounds.width
-    }
-    
-    var height: CGFloat {
-        return UIScreen.main.bounds.height
-    }
     
     var userDefault: UserDefaults {
         return UserDefaults.standard
@@ -67,10 +54,7 @@ class ViewController: UIViewController {
         
         iconView.isUserInteractionEnabled = true
         iconView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(swippingView)))
-        
-        timerLeadingConstraint.constant = width / 9
-        scheduleTrailingConstraint.constant = width / 9
-        
+        sliderView.layer.cornerRadius = 30
         timerPickerView.countDownDuration = 0
     }
 
@@ -109,29 +93,9 @@ class ViewController: UIViewController {
     @IBAction func tappedTimerButton(_ sender: UIButton) {
 
         allowLocalNoticication()
-        
         timerPickerView.isHidden = !timerPickerView.isHidden
-        schedulePickerView.isHidden = true
         
         if timerCount > 0 {
-            // タイマー開始中
-            timerDispView.isHidden = timerLabelHiddenFlg
-            timerLabelHiddenFlg = !timerLabelHiddenFlg
-        } else {
-            // タイマー開始前
-            pickerView.isHidden = timerPickerHiddenFlg
-            timerPickerHiddenFlg = !timerPickerHiddenFlg
-        }
-    }
-    
-    @IBAction func tappedScheduleButton(_ sender: UIButton) {
-        
-        allowLocalNoticication()
-        
-        schedulePickerView.isHidden = !schedulePickerView.isHidden
-        timerPickerView.isHidden = true
-
-        if scheduleTimerCount > 0 {
             // タイマー開始中
             timerDispView.isHidden = timerLabelHiddenFlg
             timerLabelHiddenFlg = !timerLabelHiddenFlg
@@ -164,35 +128,17 @@ class ViewController: UIViewController {
         createTimer(count: timerCount)
     }
     
-    @IBAction func startSchedulePickerCount(_ sender: UIDatePicker) {
-        
-        scheduleTimerCount = Int(schedulePickerView.countDownDuration)
-        createScheduleTimer()
-        let h = scheduleTimerCount / 3600
-        let m = scheduleTimerCount & 3600 / 60
-        timerLabel.text = String(format: "%1$02d:%2$02d", h,m)
-    }
-    
     private func createTimer(count: Int) {
         
         timerCount = count
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
             
             if self.timerCount == 0 {
-                //　通知設定に必要なクラスをインスタンス化
-                let trigger: UNNotificationTrigger
                 let content = UNMutableNotificationContent()
-                
-                // トリガー設定
-                trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
-                // 通知内容の設定
-                content.title = ""
-                content.body = "食事の時間になりました！"
+                content.body = "時間になりました"
                 content.sound = UNNotificationSound.default()
-                
-                // 通知スタイルを指定
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
                 let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
-                // 通知をセット
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                 
                 self.timer.invalidate()
@@ -204,20 +150,6 @@ class ViewController: UIViewController {
             let m = self.timerCount % 3600 / 60
             let s = self.timerCount % 60
             self.timerLabel.text = String(format: "%1$02d:%2$02d:%3$02d", h,m,s)
-        })
-        pickerView.isHidden = timerPickerHiddenFlg
-        timerPickerHiddenFlg = !timerPickerHiddenFlg
-    }
-    
-    private func createScheduleTimer() {
-        
-        scheduleTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { _ in
-
-            if Date().timeIntervalSinceNow == self.schedulePickerView.countDownDuration {
-                // TODO: - プッシュ通知
-                self.scheduleTimer.invalidate()
-                print("スケジュール終了")
-            }
         })
         pickerView.isHidden = timerPickerHiddenFlg
         timerPickerHiddenFlg = !timerPickerHiddenFlg
@@ -271,13 +203,13 @@ class ViewController: UIViewController {
     
         let alert = UIAlertController(title: "輝度を保存します", message: "記憶するプリセットを選択してください", preferredStyle: .alert)
 
-        let action1 = UIAlertAction(title: "P1", style: .default) { _ in
+        let action1 = UIAlertAction(title: "1", style: .default) { _ in
             self.userDefault.set(UIScreen.main.brightness, forKey: Key.preset1)
         }
-        let action2 = UIAlertAction(title: "P2", style: .default) { _ in
+        let action2 = UIAlertAction(title: "2", style: .default) { _ in
             self.userDefault.set(UIScreen.main.brightness, forKey: Key.preset2)
         }
-        let action3 = UIAlertAction(title: "P3", style: .default) { _ in
+        let action3 = UIAlertAction(title: "3", style: .default) { _ in
             self.userDefault.set(UIScreen.main.brightness, forKey: Key.preset3)
         }
 
